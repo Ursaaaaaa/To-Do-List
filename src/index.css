@@ -140,7 +140,6 @@ button {
 }
 
 .completed-items {
-  text-decoration: line-through;
   color: #9797a5;
   font-size: large;
   text-align: center;
