@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>To-Do-List</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <main>
+      <section class="to-do-list">
+        <header class="to-do">
+          <h1>Today's To Do</h1>
+          <span class="material-icons new-item"> autorenew </span>
+        </header>
+        <section class="list-field">
+          <div>
+            <form action="#" id="form-area">
+              <input
+                type="text"
+                id="add-item"
+                placeholder="Add your list here"
+              />
+              <button type="submit">
+                <span class="material-icons return"> keyboard_return </span>
+              </button>
+            </form>
+          </div>
+          <div>
+            <ul class="listed-items"></ul>
+          </div>
+        </section>
+        <footer>
+          <div class="completed-items">Clear all completed</div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
