@@ -3,14 +3,10 @@ const path = require("path");
 
 module.exports = {
   mode: 'development',
-  entry: {
-    bundle: path.resolve(__dirname, 'src/index.js'),
-  },
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name][contenthash].js',
-    clean: true,
-    assetModuleFilename: '[name][ext]',
+    filename: 'main.js',
+    path: path.resolve(__dirname, './dist'),
   },
   module: {
     rules: [
