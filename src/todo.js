@@ -1,6 +1,6 @@
 class List {
     constructor() {
-      this.list = JSON.parse(localStorage.getItem('todolist'));
+      this.list = JSON.parse(localStorage.getItem('todoList'));
       if (!this.list) {
         this.list = [];
       }
@@ -92,7 +92,7 @@ class List {
         if (a.index > b.index) return 1;
         return 0;
       });
-      localStorage.setItem('todolist', JSON.stringify(this.list));
+      localStorage.setItem('todoList', JSON.stringify(this.list));
     }
   
     editActivity(index, description) {
