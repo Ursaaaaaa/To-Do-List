@@ -10,6 +10,9 @@ document.querySelector('#form').addEventListener('submit', (e) => {
   todoList.addWork(activity);
   e.target.reset();
 });
+document.querySelector('.complete-items').addEventListener('click', () => {
+  todolist.clearCompletedActivity();
+});
 
 document.querySelector('#delete-all').addEventListener('click', () => {
   todoList.clearAll();
