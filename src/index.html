@@ -15,13 +15,16 @@
       <section class="to-do-list">
         <header class="to-do">
           <h1>Today's To Do</h1>
-          <span class="material-icons new-item"> autorenew </span>
+          <span class="material-icons new-item" id="delete-all">
+            autorenew
+          </span>
         </header>
-        <section class="list-field">
+        <section class="input-field">
           <div>
-            <form action="#" id="form-area">
+            <form action="#" id="form">
               <input
                 type="text"
+                name="activity"
                 id="add-item"
                 placeholder="Add your list here"
               />
@@ -35,7 +38,7 @@
           </div>
         </section>
         <footer>
-          <div class="completed-items">Clear all completed</div>
+          <div class="complete-items">Clear all completed</div>
         </footer>
       </section>
     </main>
