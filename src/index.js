@@ -11,7 +11,7 @@ document.querySelector('#form').addEventListener('submit', (e) => {
   e.target.reset();
 });
 document.querySelector('.complete-items').addEventListener('click', () => {
-  todolist.clearCompletedActivity();
+  todoList.clearCompletedActivity();
 });
 
 document.querySelector('#delete-all').addEventListener('click', () => {
