@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/ramrod433/Webpack/issues"
   },
-  "homepage": "https://github.com/ramrod433/Webpack#readme",
+  "homepage": "https://ramrod433.github.io/To-Do-List",
   "devDependencies": {
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
