@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ramrod433/Webpack.git"
+    "url": "git+https://github.com/ramrod433/To-Do-List.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ramrod433/Webpack/issues"
+    "url": "https://github.com/ramrod433/To-Do-List/issues"
   },
   "homepage": "https://ramrod433.github.io/To-Do-List",
   "devDependencies": {
