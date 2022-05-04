@@ -1,5 +1,18 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const productionConfig = merge([
+  {
+    output: {
+
+      publicPath: "/",
+
+
+      // Tweak this to match your GitHub project name
+      publicPath: "/To-Do-List/",
+
+    },
+  },
+]);
 
 module.exports = {
   mode: 'development',
