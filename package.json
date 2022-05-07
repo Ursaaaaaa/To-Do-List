@@ -22,6 +22,8 @@
   },
   "homepage": "https://ramrod433.github.io/To-Do-List",
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
