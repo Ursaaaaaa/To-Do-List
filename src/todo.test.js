@@ -6,7 +6,6 @@ let list = [
   { index: 2, description: 'second task', completed: false },
 ];
 
-
 const todoList = new List(list);
 const item = 'my task to add or remove';
 
@@ -21,22 +20,20 @@ describe('Add and delete function', () => {
   });
 });
 
-
-describe('edit, update and clear function', () => { 
-    const targetIndex  = 2;
-    test('edit the description of the target task', () => { 
-        const newDescription = "edited task";
-        list = todoList.editActivity(targetIndex, newDescription);
-        expect(list[1].description).toBe("edited task");
-     })
-     test('update the status of the target task', () => {
-        list = todoList.updateActivityStatus(targetIndex);
-        expect(list[1].completed).toBe(true)
-     })
-
-    test('clear complete task', () => {
-      list = todoList.clearCompletedActivity();
-      expect(list.length).toBe(0);
-    });
-
+describe('edit, update and clear function', () => {
+  const targetIndex = 2;
+  test('edit the description of the target task', () => {
+    const newDescription = 'edited task';
+    list = todoList.editActivity(targetIndex, newDescription);
+    expect(list[1].description).toBe('edited task');
   });
+  test('update the status of the target task', () => {
+    list = todoList.updateActivityStatus(targetIndex);
+    expect(list[1].completed).toBe(true);
+  });
+
+  test('clear complete task', () => {
+    list = todoList.clearCompletedActivity();
+    expect(list.length).toBe(0);
+  });
+});

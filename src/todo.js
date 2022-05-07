@@ -54,14 +54,14 @@ class List {
   updateActivityStatus(workIndex) {
     if (workIndex !== undefined) {
       this.list.forEach((l) => {
-        if(l.index == workIndex) {
-          if(l.completed){
-            l.completed = false
-          }else {
-            l.completed = true
+        if (l.index === workIndex) {
+          if (l.completed) {
+            l.completed = false;
+          } else {
+            l.completed = true;
           }
         }
-      })
+      });
     }
     return this.list;
   }
@@ -97,10 +97,10 @@ class List {
 
   editActivity(index, description) {
     this.list.forEach((l) => {
-      if(l.index === index){
-        l.description = description
+      if (l.index === index) {
+        l.description = description;
       }
-    })
+    });
     return this.list;
   }
 
@@ -134,4 +134,4 @@ class List {
   }
 }
 
-module.exports = List;module.exports = List
+module.exports = List; module.exports = List;
