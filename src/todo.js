@@ -71,12 +71,12 @@ class List {
 
   clearCompletedActivity() {
     this.list = this.list.filter((work) => work.completed === false);
-    this.display();
+    return this.list;
   }
 
   clearAll() {
     this.list.splice(0);
-    this.display();
+    return this.list;
   }
 
   saveData() {
@@ -126,4 +126,4 @@ class List {
   }
 }
 
-module.exports = List;
+module.exports = List;module.exports = List
