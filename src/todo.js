@@ -48,7 +48,7 @@ class List {
       };
       this.list.push(newWork);
     }
-    return this.list
+    return this.list;
   }
 
   updateActivityStatus(workIndex) {
@@ -66,7 +66,7 @@ class List {
     if (workIndex) {
       this.list.splice(workIndex, 1);
     }
-    return this.list
+    return this.list;
   }
 
   clearCompletedActivity() {
@@ -126,4 +126,4 @@ class List {
   }
 }
 
-module.exports = List
+module.exports = List;

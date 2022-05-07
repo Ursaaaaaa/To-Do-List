@@ -1,10 +1,12 @@
+/* eslint-disable */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+
 const productionConfig = merge([
   {
     output: {
       // Tweak this to match your GitHub project name
-      publicPath: "/To-Do-List/",
+      publicPath: '/To-Do-List/',
 
     },
   },
