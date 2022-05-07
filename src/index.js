@@ -1,9 +1,8 @@
-/* eslint-disable */
 import './index.css';
 import List from './todo.js';
-import storage from './localStorage.js';
+import Storage from './localStorage.js';
 
-const store = new storage();
+const store = new Storage();
 const todoList = new List(store);
 todoList.display();
 

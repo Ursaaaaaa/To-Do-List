@@ -1,5 +1,4 @@
-/* eslint-disable */
-class storage {
+class Storage {
   constructor() {
     this.store = [];
   }
@@ -9,3 +8,4 @@ class storage {
     return this.store;
   }
 }
+export default Storage;
