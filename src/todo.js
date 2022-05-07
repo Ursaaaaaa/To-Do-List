@@ -1,10 +1,6 @@
 class List {
-  constructor() {
-    this.list = JSON.parse(localStorage.getItem('todoList'));
-    if (!this.list) {
-      this.list = [];
-    }
-    this.display();
+  constructor(list) {
+    this.list = list;
   }
 
   display() {
@@ -51,8 +47,8 @@ class List {
         index: this.list.length,
       };
       this.list.push(newWork);
-      this.display();
     }
+    return this.list;
   }
 
   updateActivityStatus(workIndex) {
@@ -69,8 +65,8 @@ class List {
   deleteWork(workIndex) {
     if (workIndex) {
       this.list.splice(workIndex, 1);
-      this.display();
     }
+    return this.list;
   }
 
   clearCompletedActivity() {
@@ -130,4 +126,4 @@ class List {
   }
 }
 
-export default List;
+module.exports = List;
