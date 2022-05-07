@@ -44,7 +44,7 @@ class List {
       const newWork = {
         description: work,
         completed: false,
-        index: this.list.length,
+        index: this.list.length + 1,
       };
       this.list.push(newWork);
     }
@@ -53,47 +53,55 @@ class List {
 
   updateActivityStatus(workIndex) {
     if (workIndex !== undefined) {
-      if (this.list[workIndex].completed === true) {
-        this.list[workIndex].completed = false;
-      } else {
-        this.list[workIndex].completed = true;
-      }
+      this.list.forEach((l) => {
+        if (l.index === workIndex) {
+          if (l.completed) {
+            l.completed = false;
+          } else {
+            l.completed = true;
+          }
+        }
+      });
     }
-    this.display();
+    return this.list;
   }
 
   deleteWork(workIndex) {
     if (workIndex) {
-      this.list.splice(workIndex, 1);
+      this.list.splice(workIndex - 1, 1);
     }
     return this.list;
   }
 
   clearCompletedActivity() {
     this.list = this.list.filter((work) => work.completed === false);
-    this.display();
+    return this.list;
   }
 
   clearAll() {
     this.list.splice(0);
-    this.display();
+    return this.list;
   }
 
-  saveData() {
+  saveData(newlist) {
     for (let i; i < this.list.length; i += 1) {
-      this.list[i].index = i;
+      this.newlist[i].index = i;
     }
-    this.list.sort((a, b) => {
+    newlist.sort((a, b) => {
       if (a.index < b.index) return -1;
       if (a.index > b.index) return 1;
       return 0;
     });
-    localStorage.setItem('todoList', JSON.stringify(this.list));
+    localStorage.setItem('todoList', JSON.stringify(newlist));
   }
 
   editActivity(index, description) {
-    this.list[index].description = description;
-    this.saveData();
+    this.list.forEach((l) => {
+      if (l.index === index) {
+        l.description = description;
+      }
+    });
+    return this.list;
   }
 
   activateActions() {
@@ -126,4 +134,4 @@ class List {
   }
 }
 
-module.exports = List;
+module.exports = List; module.exports = List;

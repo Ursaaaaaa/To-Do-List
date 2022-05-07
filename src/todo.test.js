@@ -2,8 +2,8 @@ const List = require('./todo.js');
 
 jest.mock('./localStorage.js');
 let list = [
-  { id: 1, description: 'first task', completed: false },
-  { id: 2, description: 'second task', completed: false },
+  { index: 1, description: 'first task', completed: true },
+  { index: 2, description: 'second task', completed: false },
 ];
 
 const todoList = new List(list);
@@ -15,7 +15,25 @@ describe('Add and delete function', () => {
     expect(list.length).toBe(3);
   });
   test('should remove one item in the list', () => {
-    list = todoList.deleteWork(item);
+    list = todoList.deleteWork(3);
     expect(list.length).toBe(2);
+  });
+});
+
+describe('edit, update and clear function', () => {
+  const targetIndex = 2;
+  test('edit the description of the target task', () => {
+    const newDescription = 'edited task';
+    list = todoList.editActivity(targetIndex, newDescription);
+    expect(list[1].description).toBe('edited task');
+  });
+  test('update the status of the target task', () => {
+    list = todoList.updateActivityStatus(targetIndex);
+    expect(list[1].completed).toBe(true);
+  });
+
+  test('clear complete task', () => {
+    list = todoList.clearCompletedActivity();
+    expect(list.length).toBe(0);
   });
 });
